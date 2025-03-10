@@ -8,14 +8,21 @@ const NavBar = () => {
                     <NavLink
                         to='/'
                         style={({ isActive }) => ({
-                            color: isActive ? "red" : "#646cff",
+                            textShadow: isActive ? '0 0 10px rgba(255,255,255,.5)' : 'none',
                         })}
                     >
                         Home
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/pokemon'>Pokemon</NavLink>
+                    <NavLink
+                        to='/pokemon'
+                        style={({ isActive }) => ({
+                            textShadow: isActive ? '0 0 10px rgba(255,255,255,.5)' : 'none',
+                        })}
+                    >
+                        Pokemon
+                    </NavLink>
                 </li>
             </ul>
         </nav>
